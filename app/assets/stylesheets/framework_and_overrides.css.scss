@@ -86,29 +86,6 @@ section {
   @extend .btn-lg;
   }
 
-// Class used by ruby on rails when validation fails.
-.field_with_errors {
-  @extend .has-error;
-}
-
-// Error messages for failed form validation.
-#error_explanation {
-  margin: 20px 0;
-  padding: 20px;
-  border-left: 3px solid #eee;  
-  background-color: #fdf7f7;
-  border-color: #d9534f;
-  h2 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    color: #d9534f;
-    font-size: 18px;
-  }
-  ul li {
-    font-size: 14px;
-  }
-}
-
 // This class can be used to add Glyphicon images as the bullet points for a list
 // like this: <ul class="list-unstyled icon-list checkmark">
 // See: http://www.bootply.com/116739
@@ -230,11 +207,37 @@ section {
 
 // The intro section for the program page.
 .program-intro {
-  @extend .assign-jumbotron;
   text-align: center;
-  margin-top: 20px;
   margin-bottom: 0px;
+  padding:40px 0;
+  min-height: 400px;
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;  
+  background: url('/assets/hero.jpg') no-repeat right bottom;
+  background-size: auto 900px;
+  h1{
+    font-size: 40px;
+    text-align: left;
+    padding-left: 40px;    
+    }
+  p{
+    margin: 0 0 10px;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 40px;
+    width: 60%;    
+    }
   }
+  .program-intro-tabs{
+    position: absolute;
+    bottom: 0;
+    padding-left: 40px;
+    li a{
+      color:$bzgrey11;
+      font-size: $font-size-large;
+    }  
+  }  
 
 // Call to action to post to the group forum
 .program-forum {
@@ -248,17 +251,15 @@ section {
   h2 {
     @extend .assign-header; 
     margin-bottom: 0px;
+    padding: 7px 30px;
     } 
   }
 
 .assign-date {
   @extend .assign-col;
   color: $bzorange;
-  font-size: $font-size-large;
-  font-weight: bold;
-  p {
-    margin: 3px 0px 0px;
-    }
+  width: initial;
+  float: none;
   }
 
 .assign-summary-practice {
@@ -270,7 +271,6 @@ section {
 
 .assign-summary-checklist {
   @extend .col-sm-4;
-  color: $bzorange;
   border: 5px solid $bzgrey4;
   ul {
     @extend .list-unstyled;
@@ -281,11 +281,9 @@ section {
     color: black;
     }
   a {
-    color: $bzorange;
     text-decoration: underline;
     }
   a:hover, a:focus {
-    color: darken($bzorange, 15%);
     text-decoration: underline;
     }
 }
@@ -314,14 +312,9 @@ section {
 //------------------------------------------
 // Styles for the assignment submission pages.
 //-----------------------------------------
-
-.assign-form-submit {
-   @extend .col-sm-8;
-   margin: 10px;
-   }
-
 .btn-assign-submit {
    @extend .btn-assign;
+   margin: 10px 0px;
    }
 
 
