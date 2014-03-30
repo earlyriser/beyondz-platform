@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 # Let's use Twitter Boostrap.
